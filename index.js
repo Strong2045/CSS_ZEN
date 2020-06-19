@@ -63,7 +63,9 @@ but_next.onclick = function () {
     if (search_sel !== "") {
       clears(search_sel);
       sel === arr[timer];
-      arr[timer].classList.add("select");
+      try {
+        arr[timer].classList.add("select");
+      } catch {}
     }
   }
 };

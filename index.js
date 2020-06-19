@@ -53,7 +53,9 @@ but_find.onclick = function () {
     search_sel = text;
     clears(search_sel);
     button_on();
-    arr[timer].classList.add("select");
+    try {
+      arr[timer].classList.add("select");
+    } catch {}
   }
 };
 but_next.onclick = function () {
@@ -63,9 +65,7 @@ but_next.onclick = function () {
     if (search_sel !== "") {
       clears(search_sel);
       sel === arr[timer];
-      try {
-        arr[timer].classList.add("select");
-      } catch {}
+      arr[timer].classList.add("select");
     }
   }
 };
